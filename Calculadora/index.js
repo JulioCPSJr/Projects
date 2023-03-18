@@ -1,16 +1,16 @@
-//Declara uma constante do tipo readline-sync
+//Declaration of constant type readline-sync
 const readline = require("readline-sync");
 
 
-//função principal do nosso sistema
+//Function main
 function start(){
     console.log("Calculator for sum from two numbers");
-    let numero = readline.questionInt("Entre com o primeiro numero: ");
-    let numero2 = readline.questionInt("Entre com o segundo numero: ");
+    let number = readline.questionInt("Input the first number: ");
+    let number2 = readline.questionInt("Input the second number: ");
 
-    let sum = numero + numero2;
+    let sum = number + number2;
     console.log("The sum is: ",sum);
-    console.log("Fim de Programa.");
+    console.log("Finish program.");
 }
 
 
