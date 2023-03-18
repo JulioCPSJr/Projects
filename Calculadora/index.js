@@ -9,8 +9,8 @@ function start(){
     let number2 = readline.questionInt("Input the second number: ");
 
     let sum = number + number2;
-    console.log("The sum is: ",sum);
-    console.log("Finish program.");
+    console.log("\nThe sum is: ",sum);
+    console.log("\nFinish program.");
 }
 
 
