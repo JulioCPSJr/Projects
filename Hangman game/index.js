@@ -1,4 +1,5 @@
 const readline = require("readline-sync");
+var randomWords = require('random-words');
 
 function start(){
     console.log(" Hangman Game  ___   ");
@@ -8,15 +9,15 @@ function start(){
     console.log("              |  / \ ");
     console.log("              |      ");
     
-    let word = readline.question("\nInput the word for Game ");
+    let word = randomWords();
     let checkword = word;
     let lenword = word.length;
-    console.log(`The word have ${lenword} letters`);
+    console.log(`\nThe word have ${lenword} letters`);
     let count = 0;
     let failed = 0;
     for (i =0; i < lenword;i++){
     
-        let letter = readline.question("Input the letter ");
+        let letter = readline.question("\nInput the letter ");
         let check = word.indexOf(letter);
         let lenletter = word.length;
         if (check >= 0){
