@@ -1,15 +1,15 @@
 const readline = require("readline-sync");
 
 function start(){
-    console.log(" Hangman Game  ___");
-    console.log("              |   |");
-    console.log("              |   o");
+    console.log(" Hangman Game  ___   ");
+    console.log("              |   |  ");
+    console.log("              |   o  ");
     console.log("              |  /|\ ");
     console.log("              |  / \ ");
-    console.log("              |     ");
+    console.log("              |      ");
     
     let word = readline.question("\nInput the word for Game ");
-    let word2 = word;
+    let checkword = word;
     let lenword = word.length;
     console.log(`The word have ${lenword} letters`);
     let count = 0;
@@ -22,18 +22,18 @@ function start(){
         if (check >= 0){
             console.log("The letter has in the word");
             word = word.replace(`${letter}`,'');
-            count = count +1;
+            count = count + 1;
         }
         else{
             console.log("The letter hasn't in the word");
             failed = failed + 1;
         }
         if (lenletter <= 0 && lenword == count){
-            console.log(`Congratulations !!, the word is ${word2}`);
+            console.log(`Congratulations !!, the word is ${checkword}`);
             count = 0;
         }
         if (lenletter <= 3 && failed >=1 ){
-            console.log(`Failed !!, the word is ${word2}`);
+            console.log(`Failed !!, the word is ${checkword}`);
             failed =0;
             break;
         }
